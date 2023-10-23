@@ -189,13 +189,11 @@ img {
     url("../images/hero-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  /* max-width: 1440px;
-  background-position: center; */
-}
-.hero-container {
   max-width: 1440px;
   background-position: center;
+  margin: 0 auto;
 }
+
 .hero-title {
   max-width: 496px;
   margin: 0 auto;
@@ -489,8 +487,9 @@ img {
   color: var(--primery-botton-color);
   background-color: var(--primery-cloud-color);
   cursor: pointer;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--duration) var(--timing-function),
+    background-color var(--duration) var(--timing-function),
+    box-shadow var(--duration) var(--timing-function);
 }
 
 .button-list-item:hover,
@@ -510,14 +509,14 @@ img {
 .item {
   border: 1px solid var(--primery-cloud-color);
   background: var(--primery-white-color);
-  transition: var(--duration) var(--timing-function);
+  transition: box-shadow var(--duration) var(--timing-function);
+  transform: translateY(0%);
 }
 .item:hover,
 .item:focus {
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
-  transform: translateY(0%);
 }
 .portfolio-list-link {
   display: block;
@@ -625,8 +624,7 @@ img {
   align-items: center;
   width: 100%;
   height: 100%;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--duration) var(--timing-function);
 }
 
 .footer-social-links:hover,
@@ -651,15 +649,12 @@ img {
   justify-content: center;
   align-items: center;
   padding: 20px 0;
-
   transition: opacity var(--duration) var(--timing-function),
-    visibility 2var (--duration) var(--timing-function);
+    visibility var(--duration) var(--timing-function);
 }
 
 .modal {
-  width: 100%;
-  height: 100%;
-  max-width: 408px;
+  width: 408px;
   min-height: 584px;
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
@@ -679,7 +674,7 @@ img {
   background-color: #e7e9fc;
   border-radius: 50%;
   cursor: pointer;
-  fill: #000;
+  fill: var(--modal-background);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -691,14 +686,15 @@ img {
     border var(--duration) var(--timing-function);
 }
 .modal-button-icon {
-  fill: #111;
+  fill: currentColor;
   transition: fill var(--duration) var(--timing-function);
 }
+
 .modal-button:hover,
 .modal-button:focus {
   border: none;
   background-color: var(--secondary-botton-color);
-  fill: #ffffff;
+  color: var(--primery-white-color);
 }
 
 .backdrop.is-hidden {
