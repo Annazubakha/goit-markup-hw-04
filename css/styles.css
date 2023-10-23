@@ -639,7 +639,10 @@ img {
     0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
   border-radius: 4px;
   background: #fcfcfc;
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -651,7 +654,7 @@ img {
   background-color: #e7e9fc;
   border-radius: 50%;
   cursor: pointer;
-  fill: #000;
+  stroke: #000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -660,6 +663,7 @@ img {
   right: 24px;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0;
 }
 
 .modal-button:hover,
