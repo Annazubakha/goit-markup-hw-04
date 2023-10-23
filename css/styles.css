@@ -489,6 +489,7 @@ img {
   cursor: pointer;
   transition: color var(--duration) var(--timing-function),
     background-color var(--duration) var(--timing-function),
+    border-color var(--duration) var(--timing-function),
     box-shadow var(--duration) var(--timing-function);
 }
 
@@ -510,13 +511,13 @@ img {
   border: 1px solid var(--primery-cloud-color);
   background: var(--primery-white-color);
   transition: box-shadow var(--duration) var(--timing-function);
-  transform: translateY(0%);
 }
 .item:hover,
 .item:focus {
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+  transform: translateY(0%);
 }
 .portfolio-list-link {
   display: block;
@@ -540,8 +541,13 @@ img {
   height: 100%;
   background-color: var(--primery-botton-color);
   transform: translatey(100%);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--duration) var(--timing-function);
+
+  color: var(--primery-cloud-color);
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  padding: 40px 32px;
 }
 
 .portfolio-list-link:hover .overlay,
@@ -551,15 +557,6 @@ img {
 
 .overlay-text {
   color: var(--primery-cloud-color);
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  top: 0;
-  padding: 40px 32px;
-  background-color: var(--primery-botton-color);
-  height: 100%;
-  width: 100%;
-  transition: transform var(--duration) var(--timing-function);
 }
 
 /**
