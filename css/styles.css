@@ -510,21 +510,16 @@ img {
 .item {
   border: 1px solid var(--primery-cloud-color);
   background: var(--primery-white-color);
-  transition: box-shadow var(--duration) var(--timing-function);
 }
 .item:hover,
 .item:focus {
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
-  transform: translateY(0%);
 }
 .portfolio-list-link {
   display: block;
-  transition: color var(--duration) var(--timing-function),
-    background-color var(--duration) var(--timing-function),
-    border-color var(--duration) var(--timing-function),
-    box-shadow var(--duration) var(--timing-function);
+  transition: box-shadow var(--duration) var(--timing-function);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
@@ -552,7 +547,7 @@ img {
 
 .portfolio-list-link:hover .overlay,
 .portfolio-list-link:focus .overlay {
-  transform: translatey(0);
+  transform: translatey(0%);
 }
 
 .overlay-text {
